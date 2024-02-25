@@ -1,0 +1,87 @@
+.container { box-sizing: border-box; max-width: 1200px; padding-left: 20px; padding-right: 20px; margin-left: auto; margin-right: auto; }
+
+.brand-color { color: #f7fc0e; }
+
+.button { background: #f7fc0e; color: #030303; width: 245px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 6px; text-transform: uppercase; letter-spacing: 8%; }
+
+.button:hover { background: #ffffff; transition: .2s; }
+
+.border { --borderWidth: 4px; position: relative; background: #000; border-radius: var(--borderWidth); max-width: 592px; max-height: 481px; }
+
+.border::after { content: ''; position: absolute; top: calc(-1 * var(--borderWidth)); left: calc(-1 * var(--borderWidth)); height: calc(100% + var(--borderWidth) * 2); width: calc(100% + var(--borderWidth) * 2); background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82); border-radius: calc(2 * var(--borderWidth)); z-index: -1000; animation: animatedgradient 2s ease alternate infinite; background-size: 300% 300%; }
+
+@keyframes animatedgradient { 0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; } }
+
+.rank { width: 101px; height: auto; z-index: 1000; }
+
+.rank .box-rank { background: black; border-radius: 6px; width: 52px; height: 20px; padding: 6px 24px; display: flex; justify-content: center; align-items: center; text-transform: uppercase; }
+
+.rank .border::after { border: 2px !important; }
+
+body { margin: 0px; padding: 0px; }
+
+h1, h2, h3, h4, ul, p, blockquote, dd { margin: 0px; }
+
+ul { padding: 0px; list-style: none; }
+
+a { text-decoration: none; color: inherit; }
+
+img { max-width: 100%; height: auto; display: block; }
+
+body { background-color: #030303; color: #ffffff; font-family: "Inter", sans-serif; }
+
+header { font-family: "Inter", sans-serif; font-weight: 500; font-size: 24px; align-items: center; }
+
+header nav { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+
+header nav .logo { display: flex; flex-direction: row; align-items: center; justify-content: center; }
+
+header nav .logo img { margin-top: 20px; }
+
+header nav .logo h3 { font-family: "Jura", sans-serif; font-size: 32px; }
+
+header nav ul { display: flex; flex-direction: row; gap: 25px; }
+
+header nav ul a { font-weight: 500; font-size: 20px; line-height: 24px; }
+
+@media (max-width: 850px) { header nav ul { display: none; } }
+
+.introducao { display: grid; height: 500px; grid-template-columns: 1fr 1fr; grid-auto-flow: row; margin-top: 60px; --borderWidth: 4px; grid-gap: 10px; }
+
+.introducao .introducao-conteudo { display: flex; flex-direction: column; gap: 10px; }
+
+.introducao .introducao-conteudo h1 { font-size: clamp(40px, 5vw, 56px); line-height: 1.2; }
+
+.introducao .introducao-conteudo p { font-size: clamp(16px, 2vw, 20px); line-height: 1.5; }
+
+.introducao .introducao-conteudo .button { margin-top: 30px; margin-left: 5px; font-size: 20px; font-weight: 600; }
+
+@media (max-width: 850px) { .introducao { margin-top: 30px; gap: 20px; grid-template-columns: 1fr; text-align: start; }
+  .introducao .introducao-conteudo { align-items: center; margin-bottom: 30px; } }
+
+.introducao-card { max-width: 592px; max-height: 481px; border-radius: 6px; background-image: linear-gradient(45deg, rgba(224, 37, 206, 0.2), rgba(74, 237, 82, 0.1), rgba(189, 36, 230, 0.2), rgba(224, 37, 206, 0.2)); display: flex; flex-direction: column; justify-content: center; }
+
+.introducao-card .tft { position: relative; margin: auto; width: 400px; height: 400px; z-index: 1; }
+
+.introducao-card .introducao-article { position: relative; display: flex; flex-direction: row; align-items: center; padding: 0px 10px; justify-content: space-between; background: rgba(255, 255, 255, 0.06); }
+
+.introducao-card .introducao-article article { display: flex; flex-direction: column; justify-content: center; }
+
+.introducao-card .introducao-article article h4 { font-size: 20px; }
+
+.introducao-card .introducao-article article p { font-weight: 400; font-size: 16px; color: rgba(255, 255, 255, 0.7); }
+
+.introducao-card .introducao-article article .preco { display: flex; flex-direction: row; align-items: center; font-weight: 600; font-size: 20px; }
+
+.introducao-card .introducao-article article .preco img { position: relative; right: 5px; right: 5px; padding-top: 10px; }
+
+.introducao-card .introducao-article .button { font-weight: 600; font-size: 18px; max-width: 219px; }
+
+.introducao-card .rank { display: relative; left: 50px; top: -450px; --borderWidth: 2px; }
+
+.introducao-card .rank h1 { font-size: 16px; font-weight: 600; }
+
+@media (max-width: 1100px) { .introducao-card .rank { left: 10px; top: -480px; }
+  .introducao-card .introducao-article .button { font-weight: 600; font-size: 18px; max-width: 180px; } }
