@@ -1,3 +1,10 @@
+.slideIn { animation: slideIn 1s forwards; }
+
+@keyframes slideIn { from { transform: translateX(-50px);
+    opacity: 0; }
+  to { transform: translateX(0);
+    opacity: 1; } }
+
 .container { box-sizing: border-box; max-width: 1200px; padding-left: 20px; padding-right: 20px; margin-left: auto; margin-right: auto; }
 
 .brand-color { color: #f7fc0e; }
@@ -67,7 +74,7 @@ header nav ul a { font-weight: 500; font-size: 20px; line-height: 24px; }
 
 .introducao-card .introducao-article { position: relative; display: flex; flex-direction: row; align-items: center; padding: 0px 10px; justify-content: space-between; background: rgba(255, 255, 255, 0.06); }
 
-.introducao-card .introducao-article article { display: flex; flex-direction: column; justify-content: center; height: auto; }
+.introducao-card .introducao-article article { display: flex; flex-direction: column; justify-content: center; }
 
 .introducao-card .introducao-article article h4 { font-size: 20px; }
 
