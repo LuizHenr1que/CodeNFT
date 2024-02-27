@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @media (max-width: 850px) { .button { background: linear-gradient(97.86deg, #FF8D8D -38.38%, #F7FC0E 71.88%) !important; } }
 
 .slideIn { animation: slideIn 1s forwards; }
@@ -125,3 +126,14 @@ header nav ul a { font-weight: 500; font-size: 20px; line-height: 24px; }
 @media (max-width: 410px) { .relatorio { margin-top: 390px !important; } }
 
 @media (max-width: 361px) { .relatorio { margin-top: 400px !important; } }
+
+.top-nft { display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 30px; padding-bottom: 30px; }
+
+.top-nft h1 { font-weight: 600; font-size: clamp(30px, 5vw, 40px); line-height: 48.41px; }
+
+.top-nft .top-nft-img { display: flex; align-items: center; justify-content: center; flex-direction: row; gap: 10px; }
+
+.top-nft .top-nft-img img { width: clamp(250px, 20vw, 384px); /* Ajuste a largura conforme necessário */ max-width: 100%; /* Garante que a largura não ultrapasse o tamanho do contêiner pai */ height: auto; /* Mantém a proporção original da imagem */ }
+
+@media (max-width: 850px) { .top-nft .top-nft-img { flex-wrap: wrap; }
+  .top-nft .top-nft-img img { width: 400px; } }

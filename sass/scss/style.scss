@@ -222,7 +222,6 @@ header {
         &::-webkit-scrollbar-thumb {
           background: $YellowMobile;
         }
-
     
     .card-relatorio {
         display: flex;
@@ -302,5 +301,41 @@ header {
         }
     }
 
+.top-nft {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 30px;
+    padding-bottom: 30px;
+
+    h1 {
+        font-weight: 600;
+        font-size: clamp(30px, 5vw, 40px);
+        line-height: 48.41px;
+    }
+
+    .top-nft-img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: row;
+        gap: 10px;
+
+        img {
+            width: clamp(250px, 20vw, 384px); /* Ajuste a largura conforme necessário */
+            max-width: 100%; /* Garante que a largura não ultrapasse o tamanho do contêiner pai */
+            height: auto; /* Mantém a proporção original da imagem */
+        }
+    }
+        @media (max-width: 850px) { 
+            .top-nft-img {
+                flex-wrap: wrap;
+                img {
+                    width: 400px; 
+                }
+            }  
+    }
+}
 
 
