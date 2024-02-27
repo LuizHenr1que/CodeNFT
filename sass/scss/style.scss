@@ -65,6 +65,8 @@ header {
     grid-auto-flow: row;
     --borderWidth: 4px;
     grid-gap: 10px;
+    padding-top: 20px;
+    padding-bottom: 50px;
 
     .introducao-conteudo {
         display: flex;
@@ -288,8 +290,8 @@ header {
         }
     
     
-        @media (max-width: 440px) {
-                margin-top: 390px !important;
+        @media (max-width: 433px) {
+                margin-top: 383px !important;
         }
     }
 
