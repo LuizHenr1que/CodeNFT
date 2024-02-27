@@ -5,6 +5,15 @@ $font-inter: 'Inter', sans-serif;
 $brand-color: #f7fc0e;
 $dark: #030303;
 $light: #ffffff;
+$YellowMobile:linear-gradient(97.86deg, #FF8D8D -38.38%, #F7FC0E 71.88%);;
 
 $radius: 6px;
 $borderWidth: 4px;
+
+
+
+@media (max-width: 850px) {
+    .button {
+        background: $YellowMobile !important;
+    }
+}
