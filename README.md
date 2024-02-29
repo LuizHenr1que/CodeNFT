@@ -10,6 +10,7 @@
 
 - HTML
 - SASS
+- javascript
 
 ## 🤍 Contato
 
