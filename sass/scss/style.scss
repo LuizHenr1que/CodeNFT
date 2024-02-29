@@ -368,7 +368,6 @@ header {
         .tabela-header {
                 border-bottom: 1px solid rgba(224, 37, 206, 0.7);
                
-               
             }
             span {
                 font-weight: 500;
@@ -414,14 +413,42 @@ header {
             padding-top: 40px;
             overflow-x: scroll;
             font-size: 20px;
-             font-weight: 500;
-             line-height: 16px;
+            font-weight: 500;
+            line-height: 16px;
+            -webkit-overflow-scrolling: touch;
+            overflow: -moz-scrollbars-vertical;/* Valores das palavras-chave */
+scroll-behavior: auto;
+scroll-behavior: smooth;
+
+/* Valores globais */
+scroll-behavior: inherit;
+scroll-behavior: initial;
+scroll-behavior: unset;
+
+             
+                &::-webkit-scrollbar {
+                    width: 243px ;
+                    height: 4px;
+                    background: rgba(217, 217, 217, 0.2);
+                    
+                }
+
+                &::-webkit-scrollbar-thumb {
+                  background: $YellowMobile;
+                }
                 .tabela-colecionadores {
                 padding-top: 30px;
                 padding-right: 10px;
                 width: 650px;
+                    .tabela-header {
+                    border-bottom:none;
+
+                }
                     span {
                         padding-left: 40px;
+                    }
+                    td {
+                        padding: 10px;
                     }
                 }
              

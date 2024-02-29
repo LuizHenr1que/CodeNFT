@@ -161,9 +161,13 @@ header nav ul a { font-weight: 500; font-size: 20px; line-height: 24px; }
 
 @media (max-width: 850px) { .colecionadores-titulo h1 { font-size: 29px; }
   .colecionadores-titulo .button { display: none; }
-  .container-tabela { padding-top: 40px; overflow-x: scroll; font-size: 20px; font-weight: 500; line-height: 16px; }
+  .container-tabela { padding-top: 40px; overflow-x: scroll; font-size: 20px; font-weight: 500; line-height: 16px; -webkit-overflow-scrolling: touch; overflow: -moz-scrollbars-vertical; /* Valores das palavras-chave */ scroll-behavior: auto; scroll-behavior: smooth; /* Valores globais */ scroll-behavior: inherit; scroll-behavior: initial; scroll-behavior: unset; }
+  .container-tabela::-webkit-scrollbar { width: 243px; height: 4px; background: rgba(217, 217, 217, 0.2); }
+  .container-tabela::-webkit-scrollbar-thumb { background: linear-gradient(97.86deg, #FF8D8D -38.38%, #F7FC0E 71.88%); }
   .container-tabela .tabela-colecionadores { padding-top: 30px; padding-right: 10px; width: 650px; }
-  .container-tabela .tabela-colecionadores span { padding-left: 40px; } }
+  .container-tabela .tabela-colecionadores .tabela-header { border-bottom: none; }
+  .container-tabela .tabela-colecionadores span { padding-left: 40px; }
+  .container-tabela .tabela-colecionadores td { padding: 10px; } }
 
 @media (max-width: 650px) { .container-tabela { padding-top: 20px; font-size: 14px; line-height: 16px; }
   .container-tabela .tabela-colecionadores { padding-right: 10px; width: 650px; }
