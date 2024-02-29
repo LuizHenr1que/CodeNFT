@@ -149,7 +149,7 @@ header nav ul a { font-weight: 500; font-size: 20px; line-height: 24px; }
 
 .tabela-colecionadores .tabela-header { border-bottom: 1px solid rgba(224, 37, 206, 0.7); }
 
-.tabela-colecionadores span { font-weight: 500; font-size: 16px; color: #F7FC0E; padding-left: 60px; }
+.tabela-colecionadores span { font-weight: 500; font-size: 16px; color: #f7fc0e; padding-left: 60px; }
 
 .tabela-colecionadores th { text-align: start; padding-bottom: 20px; }
 
@@ -172,3 +172,27 @@ header nav ul a { font-weight: 500; font-size: 20px; line-height: 24px; }
 @media (max-width: 650px) { .container-tabela { padding-top: 20px; font-size: 14px; line-height: 16px; }
   .container-tabela .tabela-colecionadores { padding-right: 10px; width: 650px; }
   .container-tabela .tabela-colecionadores span { padding-left: 10px; } }
+
+.perguntas h1 { font-size: 22px, 5vw, 40px; padding-bottom: 40px; }
+
+.perguntas .accordion { max-width: 100%; overflow: hidden; }
+
+.perguntas .accordion .item { margin-bottom: 20px; padding-top: 10px; padding-bottom: 0px; overflow: hidden; border-bottom: 1px solid rgba(224, 37, 206, 0.7); font-size: clamp(14px, 5vw, 20px); font-weight: 400; line-height: 24px; }
+
+.perguntas .accordion .item input { position: absolute; opacity: 0; z-index: -1000; }
+
+.perguntas .accordion .item .title { display: flex; justify-content: space-between; cursor: pointer; padding: 10px; }
+
+.perguntas .accordion .item .title::after { content: '\276F'; width: 22px; height: 22px; text-align: center; transition: all 0.35s; color: #f7fc0e; }
+
+.perguntas .accordion .item .content { padding: 0 1em; transition: all 0.35; max-height: 0; font-weight: 200; }
+
+.perguntas .accordion .item input:checked + .title:after { transform: rotate(90deg); }
+
+.perguntas .accordion .item input:checked ~ .content { max-height: 100vh; padding: 1em; }
+
+.footer { display: flex; flex-direction: row; justify-content: center; }
+
+.footer .social { display: flex; align-items: center; justify-content: center; margin: 10px; width: 80px; height: 50px; }
+
+.footer .social .icon { border-radius: 16px; --borderWidth: 2px; font-size: 30px; }

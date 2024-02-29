@@ -372,7 +372,7 @@ header {
             span {
                 font-weight: 500;
                 font-size: 16px;
-                color: #F7FC0E;
+                color: $brand-color;
                 padding-left: 60px;
 
             }
@@ -417,13 +417,13 @@ header {
             line-height: 16px;
             -webkit-overflow-scrolling: touch;
             overflow: -moz-scrollbars-vertical;/* Valores das palavras-chave */
-scroll-behavior: auto;
-scroll-behavior: smooth;
+            scroll-behavior: auto;
+            scroll-behavior: smooth;
 
-/* Valores globais */
-scroll-behavior: inherit;
-scroll-behavior: initial;
-scroll-behavior: unset;
+            /* Valores globais */
+            scroll-behavior: inherit;
+            scroll-behavior: initial;
+            scroll-behavior: unset;
 
              
                 &::-webkit-scrollbar {
@@ -474,3 +474,85 @@ scroll-behavior: unset;
 
 
 }
+
+
+
+.perguntas {
+    h1 {
+        font-size:(22px, 5vw, 40px);
+        padding-bottom: 40px;
+    } 
+    
+    .accordion {
+    max-width: 100%;
+    overflow: hidden;
+    .item {
+        margin-bottom: 20px;
+        padding-top: 10px;
+        padding-bottom: 0px;
+        overflow: hidden;
+        border-bottom: 1px solid rgba(224, 37, 206, 0.7);
+        font-size: clamp(14px, 5vw, 20px);
+        font-weight: 400;
+        line-height: 24px; 
+            input {
+                position: absolute;
+                opacity: 0;
+                z-index: -1000;
+            }
+            .title {
+            display: flex;
+            justify-content: space-between;
+            cursor: pointer;
+            padding: 10px;
+                &::after{
+                    content: '\276F';
+                    width: 22px;
+                    height: 22px;
+                    text-align: center;
+                    transition: all 0.35s;
+                    color: $brand-color;
+                }
+            }
+                .content {
+                        padding: 0 1em;
+                        transition: all 0.35;
+                        max-height: 0;
+                        font-weight: 200;
+
+                }
+
+            input:checked + .title:after {
+                transform: rotate(90deg);
+            }
+
+            input:checked ~ .content {
+                max-height: 100vh;
+                padding: 1em;
+            }
+    }
+    
+    
+}
+}
+
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .social {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 10px;
+         width: 80px;
+        height: 50px;
+        .icon {
+        border-radius: 16px;
+         --borderWidth: 2px;
+            font-size:30px;
+        }
+    }
+}
+
