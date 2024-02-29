@@ -1,4 +1,3 @@
-@charset "UTF-8";
 @media (max-width: 850px) { .button { background: linear-gradient(97.86deg, #FF8D8D -38.38%, #F7FC0E 71.88%) !important; } }
 
 .slideIn { animation: slideIn 1s forwards; }
@@ -12,7 +11,7 @@
 
 .brand-color { color: #f7fc0e; }
 
-.button { background: #f7fc0e; color: #030303; width: 245px; height: 56px; display: flex; align-items: center; justify-content: center; border-radius: 6px; text-transform: uppercase; letter-spacing: 8%; }
+.button { background: #f7fc0e; color: #030303; width: 245px; height: 56px; font-weight: 600; display: flex; align-items: center; justify-content: center; border-radius: 6px; text-transform: uppercase; letter-spacing: 8%; }
 
 .button:hover { background: #ffffff; transition: .2s; }
 
@@ -133,7 +132,39 @@ header nav ul a { font-weight: 500; font-size: 20px; line-height: 24px; }
 
 .top-nft .top-nft-img { display: flex; align-items: center; justify-content: center; flex-direction: row; gap: 10px; }
 
-.top-nft .top-nft-img img { width: clamp(250px, 20vw, 384px); /* Ajuste a largura conforme necessário */ max-width: 100%; /* Garante que a largura não ultrapasse o tamanho do contêiner pai */ height: auto; /* Mantém a proporção original da imagem */ }
+.top-nft .top-nft-img img { width: clamp(250px, 20vw, 384px); max-width: 100%; height: auto; }
 
 @media (max-width: 850px) { .top-nft .top-nft-img { flex-wrap: wrap; }
   .top-nft .top-nft-img img { width: 400px; } }
+
+.colecionadores-titulo { display: flex; flex-direction: row; justify-content: space-between; align-items: center; }
+
+.colecionadores-titulo h1 { font-weight: 600; font-size: clamp(25px, 5vw, 40px); line-height: 48.41px; }
+
+.colecionadores-titulo .button { width: 154px; height: 41px; }
+
+.container-tabela { padding-top: 40px; padding-right: 10px; font-size: clamp(15px, 5vw, 24px); font-weight: 500; line-height: 29.05px; }
+
+.tabela-colecionadores { width: 100%; border-collapse: collapse; }
+
+.tabela-colecionadores .tabela-header { border-bottom: 1px solid rgba(224, 37, 206, 0.7); }
+
+.tabela-colecionadores span { font-weight: 500; font-size: 16px; color: #F7FC0E; padding-left: 60px; }
+
+.tabela-colecionadores th { text-align: start; padding-bottom: 20px; }
+
+.tabela-colecionadores td { padding: 15px; }
+
+.tabela-colecionadores .flex { display: flex; flex-direction: row !important; align-items: center; }
+
+.tabela-colecionadores .tft { margin-right: 30px; width: 48px; height: 48px; border-radius: 8px; }
+
+@media (max-width: 850px) { .colecionadores-titulo h1 { font-size: 29px; }
+  .colecionadores-titulo .button { display: none; }
+  .container-tabela { padding-top: 40px; overflow-x: scroll; font-size: 20px; font-weight: 500; line-height: 16px; }
+  .container-tabela .tabela-colecionadores { padding-top: 30px; padding-right: 10px; width: 650px; }
+  .container-tabela .tabela-colecionadores span { padding-left: 40px; } }
+
+@media (max-width: 650px) { .container-tabela { padding-top: 20px; font-size: 14px; line-height: 16px; }
+  .container-tabela .tabela-colecionadores { padding-right: 10px; width: 650px; }
+  .container-tabela .tabela-colecionadores span { padding-left: 10px; } }

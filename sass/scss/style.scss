@@ -323,9 +323,9 @@ header {
         gap: 10px;
 
         img {
-            width: clamp(250px, 20vw, 384px); /* Ajuste a largura conforme necessário */
-            max-width: 100%; /* Garante que a largura não ultrapasse o tamanho do contêiner pai */
-            height: auto; /* Mantém a proporção original da imagem */
+            width: clamp(250px, 20vw, 384px);
+            max-width: 100%; 
+            height: auto; 
         }
     }
         @media (max-width: 850px) { 
@@ -338,4 +338,112 @@ header {
     }
 }
 
+.colecionadores-titulo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    h1 {
+        font-weight: 600;
+        font-size: clamp(25px, 5vw, 40px);
+        line-height: 48.41px;
+    }
+    .button { 
+        width: 154px;
+        height: 41px;
+    }
+}
 
+.container-tabela {
+        padding-top: 40px;
+        padding-right: 10px;
+        font-size: clamp(15px, 5vw, 24px);
+        font-weight: 500;
+        line-height: 29.05px;
+    }
+
+    .tabela-colecionadores {
+        width: 100%;
+        border-collapse: collapse;
+        .tabela-header {
+                border-bottom: 1px solid rgba(224, 37, 206, 0.7);
+               
+               
+            }
+            span {
+                font-weight: 500;
+                font-size: 16px;
+                color: #F7FC0E;
+                padding-left: 60px;
+
+            }
+            th {
+                text-align: start;
+                padding-bottom: 20px;
+            }
+            td {
+                padding: 15px;
+            }
+            .flex {
+                display: flex;
+                flex-direction: row !important;
+                align-items: center;
+            }
+            .tft {
+        margin-right: 30px;
+        width: 48px;
+        height: 48px;
+        border-radius: 8px;
+        
+    }
+    }
+
+
+
+     @media (max-width: 850px) { 
+         .colecionadores-titulo {
+             h1 {
+                font-size: 29px;
+            }
+             .button {
+                 display: none;
+             }
+         }
+         
+         .container-tabela {
+            padding-top: 40px;
+            overflow-x: scroll;
+            font-size: 20px;
+             font-weight: 500;
+             line-height: 16px;
+                .tabela-colecionadores {
+                padding-top: 30px;
+                padding-right: 10px;
+                width: 650px;
+                    span {
+                        padding-left: 40px;
+                    }
+                }
+             
+              }
+
+}
+
+@media (max-width: 650px) {  
+         .container-tabela {
+            padding-top: 20px;
+            font-size: 14px;
+             line-height: 16px;
+                .tabela-colecionadores {
+                padding-right: 10px;
+                width: 650px;
+                    span {
+                        padding-left: 10px;
+                    }
+                    
+                }
+              }
+    
+
+
+}
